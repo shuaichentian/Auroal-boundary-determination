@@ -1,12 +1,12 @@
 function [phi1, phi2] = evolution2(i,phi1, phi2, I,img_log, mask, rad, alpha, beta, gama, lamda, lamda2, sigma, deltaT, epsilon)
-% EVOLUTION2 Ë®Æ½¼¯Ñİ»¯
-% ÊäÈë£º
-%      phi1: ÄÚË®Æ½¼¯º¯Êı
-%      phi2: ÍâË®Æ½¼¯º¯Êı
-%      I   : ÊäÈëÍ¼Ïñ
-%      mask: FOV ÑÚÄ£
+% EVOLUTION2 æ°´å¹³é›†æ¼”åŒ–
+% è¾“å…¥ï¼š
+%      phi1: å†…æ°´å¹³é›†å‡½æ•°
+%      phi2: å¤–æ°´å¹³é›†å‡½æ•°
+%      I   : è¾“å…¥å›¾åƒ
+%      mask: FOV æ©æ¨¡
 
-%-- ¼ÆËãphi1ºÍphi2µÄhevisideº¯Êı
+%-- è®¡ç®—phi1å’Œphi2çš„hevisideå‡½æ•°
 hphi1 = Heaviside(phi1, epsilon);
 hphi2 = Heaviside(phi2, epsilon);
 
@@ -18,11 +18,11 @@ sigma2 = 2 * sigma^2;  % 2 * sigma^2
 % dhphi1 = Dirac(phi1, epsilon);
 % dhphi2 = Dirac(phi2, epsilon);
 
-%-- »ñÈ¡Õ­´ø×ø±ê
+%-- è·å–çª„å¸¦åæ ‡
 [idx1, x1, y1] = get_narrowband(phi1);
 [idx2, x2, y2] = get_narrowband(phi2);
 
- %-- ¼ÆËãÈı¸öÇøÓòµÄÆ½¾ù»Ò¶È
+ %-- è®¡ç®—ä¸‰ä¸ªåŒºåŸŸçš„å¹³å‡ç°åº¦
 [c1, c2, cb] = Mean_block(hphi1, hphi2, I, mask);
 
 
