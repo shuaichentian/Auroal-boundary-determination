@@ -93,7 +93,7 @@ for i=1:a
     tic;
     for i = 1 : 560
     
-    %ÏÔÊ¾Ë®Æ½¼¯µÄÑİ»¯×´¿ö
+    %æ˜¾ç¤ºæ°´å¹³é›†çš„æ¼”åŒ–çŠ¶å†µ
     if mod(i-1, 10) == 0      
             figure(3);
             imagesc(image_o,[0, 255]); axis off; axis equal; colormap(gray);
@@ -109,7 +109,7 @@ for i=1:a
 
     [phi1, phi2] = evolution2(i,phi1, phi2, Img,img_log, mask, rad, alpha, beta, gama, lamda, lamda2, sigma, deltaT, epsilon);
 
-    %ÏÔÊ¾ÂÖÀªÇúÏß
+    %æ˜¾ç¤ºè½®å»“æ›²çº¿
 %     figure(4);mesh(phi1);
 %     figure(5);mesh(phi2);
 
@@ -117,7 +117,7 @@ for i=1:a
     end
     toc;
     
-    '''ÕÒµ½ÁãµÈÖµÏßµÄÎ»ÖÃ'''
+    '''æ‰¾åˆ°é›¶ç­‰å€¼çº¿çš„ä½ç½®'''
     [c1,h1]=contour(phi1, [0,0]);
     [c2,h2]=contour(phi2, [0,0]);
     number1=c1(2,1);
