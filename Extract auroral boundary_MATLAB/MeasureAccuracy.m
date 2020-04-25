@@ -1,4 +1,4 @@
-%% 计算定量评价指标
+%% 录脝脣茫露篓脕驴脝脌录脹脰赂卤锚
 function [Pd, Pf, Pmp] = MeasureAccuracy(Pa, Pm, Iauto, Imanual)
 
 Na = size(Pa, 2);
