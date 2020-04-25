@@ -70,7 +70,7 @@
     tic;
     for i = 1 : 1000
     
-    %重新初始化SDF
+    %閲嶆柊鍒濆鍖朣DF
     if mod(i-1, 10) == 0
 %         flag = ones(m, n);
 %         flag(phi1 < 0) = -1;
@@ -93,7 +93,7 @@
 %     [phi1, phi2] = evolution(phi1, phi2, Img, mask, alpha, beta, gama, lamda, sigma, deltaT, epsilon);
         [phi1, phi2] = evolution2(i,phi1, phi2, Img,img_log, mask, rad, alpha, beta, gama, lamda, lamda2, sigma, deltaT, epsilon);
 
-    %显示轮廓曲线
+    %鏄剧ず杞粨鏇茬嚎
 %     figure(4);mesh(phi1);
 %     figure(5);mesh(phi2);
 
@@ -104,9 +104,9 @@
     Iauto = zeros(size(image));
     Iauto(phi1 <= 0 & phi2 >=0) = 1;
 %Pa = extractBoundary(Iauto);
-%load(['结果/' imageDate '_manual.mat']);
+%load(['缁撴灉/' imageDate '_manual.mat']);
 %Pm = Points;
-%Imanual = imread(['结果/' imageDate '_manual.bmp']);
+%Imanual = imread(['缁撴灉/' imageDate '_manual.bmp']);
 %Imanual = im2bw(Imanual);
 %[Pd, Pf, Pmp] = MeasureAccuracy(Pa, Pm, Iauto, Imanual);
 %disp('Pd  Pf  Pmp');
