@@ -1,6 +1,6 @@
 function Points = extractBoundary(Im)
 
-% ²ÉÓÃÉäÏß·¨ÌáÈ¡¼«¹âÂÑÍâ±ß½ç
+% é‡‡ç”¨å°„çº¿æ³•æå–æå…‰åµå¤–è¾¹ç•Œ
 
 [h, w] = size(Im);
 % imshow(Im);
@@ -12,8 +12,8 @@ centerY = fix(mean(yy));
 % centerY = fix(centerY);
 flag = zeros(size(Im));
 
-% ÉÏ±ß½ç
-% disp('ÉÏ±ß½ç');
+% ä¸Šè¾¹ç•Œ
+% disp('ä¸Šè¾¹ç•Œ');
 y = 1;
 for x = 1 : w
     [ x_coord, y_coord ] = bresenham_line(x, y, centerX, centerY);
@@ -23,8 +23,8 @@ for x = 1 : w
     flag(x_coord(k), y_coord(k)) = 1;
 end
 
-% ÏÂ±ß½ç
-% disp('ÏÂ±ß½ç');
+% ä¸‹è¾¹ç•Œ
+% disp('ä¸‹è¾¹ç•Œ');
 y = h;
 for x = 1 : w
     [ x_coord, y_coord ] = bresenham_line(x, y, centerX, centerY);
@@ -34,8 +34,8 @@ for x = 1 : w
     flag(x_coord(k), y_coord(k)) = 1;
 end
 
-% ×ó±ß½ç
-% disp('×ó±ß½ç');
+% å·¦è¾¹ç•Œ
+% disp('å·¦è¾¹ç•Œ');
 x = 1;
 for y = 1 : h
     [ x_coord, y_coord ] = bresenham_line(x, y, centerX, centerY);
@@ -45,8 +45,8 @@ for y = 1 : h
     flag(x_coord(k), y_coord(k)) = 1;
 end
 
-% ÓÒ±ß½ç
-% disp('ÓÒ±ß½ç');
+% å³è¾¹ç•Œ
+% disp('å³è¾¹ç•Œ');
 x = w;
 for y = 1 : h
     [ x_coord, y_coord ] = bresenham_line(x, y, centerX, centerY);
